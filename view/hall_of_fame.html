@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    Bagian dari CovidAvoid: A Social Distancing Game
+    Dikembangkan oleh Fachri Veryawan Mahkota, 2020
+
+    hall_of_fame.php
+    -> VIew untuk page utama game CovidAvoid.
+ -->
+
+ 
+<head>
+    <!-- Icon tab -->
+    <link rel="icon" href="./assets/img/ico.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Nama tab -->
+    <title>CovidAvoid</title>
+
+    <!-- Background music: Jeremy Blake = Powerup! (No Copyright Music) | https://youtu.be/l7SwiFWOQqM -->
+    <audio src="./assets/audio/bgm.mp3" type="audio/mp3" autoplay loop></audio>
+</head>
+
+<body>
+    <div class="container d-flex align-items-center justify-content-center min-vh-100">
+        <div class="d-flex justify-content-center w-50">
+            <!-- Gambar logo game CovidAvoid -->
+            <img src="./assets/img/ca.png" class="img-fluid" alt="" width="600">
+        </div>
+        <div class="d-flex justify-content-center w-50">
+            <div class="lh-100 my-0">
+                <!-- Judul game -->
+                <h1 class="mb-0 lh-100 mt-1">CovidAvoid</h1>
+                <h3 class="mb-5">A Social Distancing Game</h3>
+                <!-- Form u/ memasukkan nama player yang akan melakukan POST ke controller play.php -->
+                <form action="./controller/play.php" method="POST">
+                    <div class="form-group">
+                        <label for="playerName">Player Name</label>
+                        <input class="form-control" id="playerName" aria-describedby="playerName" name="playerName">
+                        <small class="form-text text-muted">Your name and score will be recorded
+                            on the Hall of Fame.</small>
+                    </div>
+                    <button type="submit" class="btn btn-outline-info">Play Game</button>
+                </form>
+                <br>
+                <br>
+                <br>
+                <small class="text-muted">Scroll down to see the Hall of Fame!</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-flex align-items-center justify-content-center">
+        <div class="jumbotron d-flex justify-content-center w-100">
+            <div class="col">
+                <!-- Hall of Fame: tempat ditampilkannya skor-skor mereka yang sudah memainkan game -->
+                <h1 class="display-4">Hall of Fame</h1>
+            <p class="lead">Names and last trip scores of those who played the game.</p>
+            </div>
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <!-- Heading dari tabel data pemain -->
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Player Name</th>
+                            <th scope="col">Trip</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- DATA_TBL akan digantikan dengan data yang sudah diambil sebelumnya -->
+                        DATA_TBL
+                    </tbody>
+                </table>
+                <small class="form-text text-muted">Note: Every trip will overwrite previous trip score.</small>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

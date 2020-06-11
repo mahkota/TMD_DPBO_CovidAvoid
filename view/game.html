@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    Bagian dari CovidAvoid: A Social Distancing Game
+    Dikembangkan oleh Fachri Veryawan Mahkota, 2020
+
+    hall_of_fame.php
+    -> VIew untuk page utama game CovidAvoid.
+ -->
+
+
+<head>
+    <!-- Icon tab -->
+    <link rel="icon" href="../assets/img/ico.png">
+
+    <!-- Canvas u/ game-->
+    <style>
+        canvas {
+            border: 1px solid #d3d3d3;
+            background-color: #000000;
+        }
+    </style>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Nama tab -->
+    <title>CovidAvoid</title>
+
+    <!-- Masukkan javascript game -->
+    <script src="../assets/js/cavoid.js"></script>
+</head>
+
+<body>
+    <div class="container d-flex align-items-center justify-content-center min-vh-100">
+        <div class="d-flex justify-content-center">
+            <!-- Div diberikan id untuk posisi memasukkan canvas di dalam Js -->
+            <div class="lh-100 my-0" id="here">
+                <!-- Script mulai game dijalankan -->
+                <script>
+                    startGame();
+                </script>
+                <br>
+                <small class="text-muted" align="center">Use ARROW UP and ARROW DOWN on your keyboard
+                    to control your character.
+                </small>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
